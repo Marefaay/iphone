@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Loader Start */
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 5;
+transition: opacity 15s ,10s visibility;
+}
+.hide-loader{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading .loader-chart{
+    /* background: #000; */
+    width: 50%;
+    height: 50%;
+    margin:10% auto;
+    position: relative;
+
+}
+.loading .loader-chart span:first-child{
+    position: absolute;
+  bottom:  0%;
+  left: 20%;
+    /* display: block; */
+    width: 30px;
+    height: 50%;
+    background-color: #d68307;
+    animation-name:moving ;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transition: 0.5s ease-in-out;
+    animation-delay: 0.2s;
+}
+.loading .loader-chart span:nth-child(2){
+    /* position: absolute; */
+    position: absolute;
+    bottom:  0%;
+    left: 30%;
+    /* display: block; */
+    width: 30px;
+    height: 40%;
+    background-color: #290788;
+    animation-name:moving ;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transition: 0.5s ease-in-out;
+    animation-delay: 0.8s;
+}
+.loading .loader-chart span:nth-child(3){
+    /* position: absolute; */
+    position: absolute;
+    bottom:  0%;
+    left: 50%;
+    /* display: block; */
+    width: 30px;
+    height:60%;
+    background-color: rgb(3, 82, 3);
+    animation-name:moving ;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transition: 0.5s ease-in-out;
+    animation-delay: 0.16s;
+}
+.loading .loader-chart span:nth-child(4){
+    /* position: absolute; */
+    position: absolute;
+    bottom:  0%;
+    left: 60%;
+    display: block;
+    width: 30px;
+    height: 70%;
+    background-color: #b3ff00;
+    animation-name:moving ;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transition: 0.5s ease-in-out;
+    animation-delay: 0.24s;
+}
+@keyframes moving {
+    100%{
+        height: 100%;
+    }
+    
+}
+/* Loader End */
+/* Header Start */
+header {
+  padding: 25px 0;
+}
+header .logo img {
+  width: 50px;
+}
+header nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+.active {
+  color: blue;
+}
+.active::before {
+  content: "";
+  background-color: blue;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+header nav ul li {
+  margin: 0 15px;
+  position: relative;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+}
+header nav ul li::before {
+  content: "";
+  background-color: blue;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+header nav ul li:hover::before {
+  width: 100%;
+}
+header nav ul li:hover a {
+  color: blue;
+}
+.icons {
+  background-color: #c72121;
+  width: 40px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.icons span {
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 3px;
+}
+.hide {
+  left: 80px !important;
+  transition: 0.8s ease-in-out;
+}
+.icon-two {
+  transform: rotate(45deg) !important;
+  left: 5px !important;
+  top: 15px !important;
+  transition: 0.3s ease-in-out;
+}
+.icon-one {
+  transform: rotate(-45deg) !important;
+  left: 2px !important;
+  top: 0px !important;
+  transition: 0.3s ease-in-out;
+}
+.nav {
+  background-color: blue;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  left: -5000px;
+  top: 0;
+  transition: 0.3s ease-in-out;
+}
+.show-nav {
+  left: 0;
+}
+.nav ul li a {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.6px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+.nav ul li a:hover {
+  color: #333;
+}
+@media (max-width: 767px) {
+  nav {
+    display: none;
+  }
+  header {
+    padding: 15px;
+  }
+}
+@media (max-width: 526px) {
+  nav {
+    display: none;
+  }
+  header {
+    padding: 15px;
+  }
+}
+/* Header End */
+/* Main Start */
+main {
+  color: #fff;
+}
+main .col-one-conent h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+main .col-one-conent p {
+  color: #d8d8d8;
+  width: 85%;
+}
+main .col-one-conent a {
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 18px;
+  color: black;
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* width: 40%; */
+}
+main .col-two-conent img {
+  width: 40%;
+  margin-left: 30%;
+}
+.bgs {
+  margin-top: 60px;
+}
+.bgs img {
+  width: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.bgs img:hover {
+  transform: scale(1.2);
+}
+.bg-active {
+  border: 5px solid #fff;
+  border-radius: 8px;
+}
+@media (max-width: 992px) {
+  main .col-one-conent {
+    text-align: center;
+    margin-top: 15px;
+  }
+  main .col-one-conent h1 {
+    font-size: 30px;
+  }
+  main .col-one-conent p {
+    width: 100%;
+    /* font-size: 30px; */
+  }
+  main .col-two-conent img {
+    width: 34%;
+  }
+  .bgs {
+    margin-top: 35%;
+  }
+}
+@media (max-width: 767px) {
+  main .col-one-conent {
+    text-align: center;
+    margin-top: 15px;
+  }
+  main .col-one-conent h1 {
+    font-size: 30px;
+  }
+  main .col-one-conent p {
+    width: 100%;
+    /* font-size: 30px; */
+  }
+  main .col-two-conent img {
+    width: 34%;
+  }
+  .bgs {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 526px) {
+  main .col-one-conent {
+    text-align: center;
+    margin-top: 15px;
+  }
+  main .col-one-conent h1 {
+    font-size: 30px;
+  }
+  main .col-one-conent p {
+    /* font-size: 30px; */
+    text-align: center;
+    width: 100%;
+  }
+  .bgs {
+    margin-top: 0px;
+  }
+}
+/* Main End */
